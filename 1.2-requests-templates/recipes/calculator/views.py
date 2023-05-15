@@ -7,8 +7,8 @@ DATA = {
         'соль, ч.л.': 0.5,
     },
     'pasta': {
-        'макароны, г': 0.3,
-        'сыр, г': 0.05,
+        'макароны, кг': 0.3,
+        'сыр, кг': 0.05,
     },
     'buter': {
         'хлеб, ломтик': 1,
@@ -16,15 +16,25 @@ DATA = {
         'сыр, ломтик': 1,
         'помидор, ломтик': 1,
     },
-    # можете добавить свои рецепты ;)
 }
 
-# Напишите ваш обработчик. Используйте DATA как источник данных
-# Результат - render(request, 'calculator/index.html', context)
-# В качестве контекста должен быть передан словарь с рецептом:
-# context = {
-#   'recipe': {
-#     'ингредиент1': количество1,
-#     'ингредиент2': количество2,
-#   }
-# }
+def calc_recipes_omlet(request):
+    servings = int(request.GET.get('serving', 1))
+    context = {
+        'recipe': {ing: am * servings for ing, am in DATA['omlet'].items()}
+    }
+    return render(request, 'calculator/index.html', context)
+
+def calc_recipes_pasta(request):
+    servings = int(request.GET.get('serving', 1))
+    context = {
+        'recipe': {ing: am * servings for ing, am in DATA['pasta'].items()}
+    }
+    return render(request, 'calculator/index.html', context)
+
+def calc_recipes_buter(request):
+    servings = int(request.GET.get('serving', 1))
+    context = {
+        'recipe': {ing: am * servings for ing, am in DATA['buter'].items()}
+    }
+    return render(request, 'calculator/index.html', context)
