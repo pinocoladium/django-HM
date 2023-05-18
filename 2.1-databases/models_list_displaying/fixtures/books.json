@@ -1,20 +1,47 @@
 [
-  {
-    "model": "books.book",
-    "pk": 1,
-    "fields": {
-      "name": "Война и мир",
-      "author": "Ф.Д. Достоевский",
-      "pub_date": "2018-02-27"
+    {
+      "model": "books.book",
+      "pk": 1,
+      "fields": {
+        "name": "Война и мир",
+        "author": "Л.Н. Толстой",
+        "pub_date": "2018-02-27"
+      }
+    },
+    {
+      "model": "books.book",
+      "pk": 2,
+      "fields": {
+        "name": "1984",
+        "author": "Джордж Оруэл",
+        "pub_date": "2016-12-06"
+      }
+    },
+    {
+      "model": "books.book",
+      "pk": 3,
+      "fields": {
+        "name": "Идиот",
+        "author": "Ф.М. Достоевский",
+        "pub_date": "2017-10-12"
+      }
+    },
+    {
+      "model": "books.book",
+      "pk": 4,
+      "fields": {
+        "name": "Прощай оружие",
+        "author": "Эрнест Хемингуэй",
+        "pub_date": "2015-05-27"
+      }
+    },
+    {
+      "model": "books.book",
+      "pk": 5,
+      "fields": {
+        "name": "Время жить и время умирать",
+        "author": "Эрих Мария Ремарк",
+        "pub_date": "2019-03-09"
+      }
     }
-  },
-  {
-    "model": "books.book",
-    "pk": 2,
-    "fields": {
-      "name": "1984",
-      "author": "Джордж Оруэл",
-      "pub_date": "2016-12-06"
-    }
-  }
-]
+  ]
