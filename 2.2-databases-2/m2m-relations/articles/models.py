@@ -22,7 +22,7 @@ class Tag(models.Model):
     
 class Scope(models.Model):
     
-    is_main = models.BooleanField()
+    is_main = models.BooleanField(verbose_name='основной раздел')
     article = models.ForeignKey("Article", on_delete=models.CASCADE, related_name='scopes')
     tag = models.ForeignKey("Tag", on_delete=models.CASCADE, related_name='scopes')
 
