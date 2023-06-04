@@ -7,8 +7,8 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Помидор",
-  "description": "Лучшие помидоры на рынке"
+  "title": "аре",
+  "description": "Лучшие мармелад на рынке"
 }
 
 ###
@@ -36,7 +36,7 @@ Content-Type: application/json
 ###
 
 # поиск продуктов по названию и описанию
-GET {{baseUrl}}/products/?search=помидор
+GET {{baseUrl}}/products/?search=дыне
 Content-Type: application/json
 
 ###
@@ -46,10 +46,10 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3",
+  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3 12/0",
   "positions": [
     {
-      "product": 2,
+      "product": 9,
       "quantity": 250,
       "price": 120.50
     },
@@ -64,7 +64,7 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/4/
+PATCH {{baseUrl}}/stocks/6/
 Content-Type: application/json
 
 {
@@ -72,12 +72,12 @@ Content-Type: application/json
     {
       "product": 2,
       "quantity": 100,
-      "price": 130.80
+      "price": 1111.80
     },
     {
       "product": 3,
       "quantity": 243,
-      "price": 145
+      "price": 1111
     }
   ]
 }
@@ -85,5 +85,5 @@ Content-Type: application/json
 ###
 
 # поиск складов, где есть определенный продукт
-GET {{baseUrl}}/stocks/?products=2
+GET {{baseUrl}}/stocks/?search=дын
 Content-Type: application/json
