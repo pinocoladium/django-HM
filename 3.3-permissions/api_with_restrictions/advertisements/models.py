@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django_filters import rest_framework
 
 
 class AdvertisementStatusChoices(models.TextChoices):
@@ -28,3 +29,10 @@ class Advertisement(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
+
+class Filter(rest_framework.FilterSet):
+    date = rest_framework.DateFromToRangeFilter()
+
+    class Meta:
+        model = Advertisement
+        fields = ['date', ]
