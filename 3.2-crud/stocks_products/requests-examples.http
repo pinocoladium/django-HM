@@ -46,7 +46,7 @@ POST {{baseUrl}}/stocks/
 Content-Type: application/json
 
 {
-  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3 12/0",
+  "address": "мой адрес не дом и не улица, мой адрес сегодня такой: www.ленинград-спб.ru3 15/0",
   "positions": [
     {
       "product": 9,
@@ -64,7 +64,7 @@ Content-Type: application/json
 ###
 
 # обновляем записи на складе
-PATCH {{baseUrl}}/stocks/6/
+PATCH {{baseUrl}}/stocks/14/
 Content-Type: application/json
 
 {
@@ -72,12 +72,12 @@ Content-Type: application/json
     {
       "product": 2,
       "quantity": 100,
-      "price": 1111.80
+      "price": 77747
     },
     {
       "product": 3,
       "quantity": 243,
-      "price": 1111
+      "price": 77747
     }
   ]
 }
