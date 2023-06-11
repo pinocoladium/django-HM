@@ -21,12 +21,12 @@ Authorization: Token 21c4c26b25ebc699d92efbb3757186f9d7ef236a
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/20/
+PATCH {{baseUrl}}/advertisements/46/
 Content-Type: application/json
 Authorization: Token f724e5897e18b76eb15af726a63a7cdf58afdc31
 
 {
-  "status": "OPEN"
+  "status": "CLOSED"
 }
 
 ###
@@ -38,5 +38,5 @@ Content-Type: application/json
 ###
 
 # фильтрация по дате
-GET {{baseUrl}}/advertisements/?created_at_before=2020-10-01
+GET {{baseUrl}}/advertisements/?created_at_after=2023-06-10
 Content-Type: application/json

@@ -29,10 +29,3 @@ class Advertisement(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
-
-class Filter(rest_framework.FilterSet):
-    date = rest_framework.DateFromToRangeFilter()
-
-    class Meta:
-        model = Advertisement
-        fields = ['date', ]
