@@ -14,8 +14,8 @@ class AdvertisementViewSet(ModelViewSet):
     filterset_class = AdvertisementFilter
 
     def get_permissions(self):
-        if self.action in ["list"]:
+        if self.action in ["list", "retrieve"]:
              permission_classes = [AllowAny]
-        elif self.action in ["create", "update", "partial_update"]:
+        elif self.action in ["create", "update", "partial_update", "destroy"]:
             permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
         return [permission() for permission in permission_classes]
